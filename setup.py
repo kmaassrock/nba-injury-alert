@@ -1,0 +1,59 @@
+"""
+Setup script for the NBA Injury Alert system.
+"""
+from setuptools import setup, find_packages
+
+setup(
+    name="nba-injury-alert",
+    version="0.1.0",
+    description="A real-time notification system for NBA player injury status changes",
+    author="NBA Injury Alert Team",
+    author_email="info@example.com",
+    url="https://github.com/yourusername/nba-injury-alert",
+    packages=find_packages(),
+    include_package_data=True,
+    install_requires=[
+        "fastapi>=0.95.0",
+        "uvicorn>=0.21.1",
+        "sqlalchemy>=2.0.9",
+        "pydantic>=1.10.7",
+        "python-dotenv>=1.0.0",
+        "httpx>=0.24.0",
+        "asyncio>=3.4.3",
+        "python-jose>=3.3.0",
+        "passlib>=1.7.4",
+        "bcrypt>=4.0.1",
+        "python-multipart>=0.0.6",
+        "aiosmtplib>=2.0.1",
+        "alembic>=1.10.3",
+        "psycopg2-binary>=2.9.6",
+        "python-dateutil>=2.8.2",
+        "pytz>=2023.3",
+        "tenacity>=8.2.2",
+    ],
+    extras_require={
+        "dev": [
+            "pytest>=7.3.1",
+            "pytest-asyncio>=0.21.0",
+            "black>=23.3.0",
+            "isort>=5.12.0",
+            "flake8>=6.0.0",
+            "mypy>=1.2.0",
+        ],
+    },
+    entry_points={
+        "console_scripts": [
+            "nba-injury-alert=backend.main:main",
+        ],
+    },
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+    ],
+    python_requires=">=3.9",
+)
